@@ -1,0 +1,39 @@
+<html>
+
+	<head>
+	<title>Конвертер температур</title>
+	<link href="style.css" rel="stylesheet">
+	</head>
+	
+	<body>
+	<div class="converter">
+	<div class="1">
+	<input type="text" id="input" placeholder="Температура в С°">
+	</div>
+	<div class="2">
+	<button id="knopka">в F°</button>
+	<input type="text" id="output" disabled>
+	</div>
+	</div>
+	<script>
+
+let button = document.getElementById("knopka");
+let input = document.getElementById("input");
+let output = document.getElementById("output");
+
+
+function print() 
+{
+	let a = input.value;
+	var sum = 1.8*a+32;
+	output.value = sum;
+}
+
+button.addEventListener("click", print);
+
+	</script>
+	</body>
+	
+</html>
+	
+	
