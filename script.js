@@ -1,13 +1,27 @@
+var textarea = document.getElementById("sandbox");
 let button = document.getElementById("knopka");
-let input = document.getElementById("input");
-let output = document.getElementById("output");
 
+		function print() {
+			
+	text = textarea.value;
+	var arr = text.split('.');
+	var arr = text.split(',');
+	var arr = text.split(' ');
 
-function print() 
+	var result = {};
+	
+for (var i = 0; i < arr.length; ++i)
 {
-	let a = input.value;
-	var sum = 1.8*a+32;
-	output.value = sum;
+    var a = arr[i];
+    if (result[a] != undefined)
+        ++result[a];
+    else
+        result[a] = 1;
+}
+
+for (var key in result)
+	
+	alert(key + ' повторяется ' + result[key] + ' раз(а)');
 }
 
 button.addEventListener("click", print);
