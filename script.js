@@ -5,7 +5,7 @@ let button = document.getElementById("knopka");
 			
 	text = textarea.value;
 	var arr = text.split('.');
-	var arr = text.split(',');
+	var arr = text.split(', ');
 	var arr = text.split(' ');
 
 	var result = {};
